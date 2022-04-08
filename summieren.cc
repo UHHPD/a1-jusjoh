@@ -18,25 +18,25 @@ fin.close()
 */
 #include <iostream>
 #include <fstream>
-using namespace std;
+using namespace std; //Setzt den Namespace fest, dann muss man das nicht immer angeben
 int main(){
   
-  ifstream fin ("daten.txt");
-  ofstream fout("Summen.txt");
+  ifstream fin ("daten.txt"); //öffnet die Input-Datei
+  ofstream fout("Summen.txt"); //öffnet die Output-Datei
   int summe;
   int zahl;
-  for( int j = 0; j < 234; j++){
+  for( int j = 0; j < 234; j++){ // Schleife über alle Zeilen
     summe = 0;
-    for( int i = 0; i < 2; i++){
+    for( int i = 0; i < 2; i++){ // Schleife für jede Zeile. Liest Ziffer 1 und 2 und summiert diese.
       fin >> zahl;
       summe = summe + zahl; 
       
     } 
-    fout << summe << endl;
+    fout << summe << endl; // Schreibt die Summe in die Output-Datei
   }
   //cout << summe << endl;
-  fout.close();
-  fin.close();
+  fout.close(); // Schließt die Output-Datei
+  fin.close();  // Schließt die Input-Datei
   
 
 }
