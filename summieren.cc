@@ -1,42 +1,21 @@
-/*
-int zahl ;
-std:cin >> zahl
-std::cout << zahl << std::endl;
-
-#include <fstream>
-std::ofstream fout("ausgabe.txt");
-
-fout << zahl << std::endl;
-fout.close();
-
-#include <fstream>
-std::ifstream fin("eingabe.txt");
-
-int zahl
-fin >> zahl
-fin.close()
-*/
+// Initialisierung der Pakete
 #include <iostream>
 #include <fstream>
-using namespace std; //Setzt den Namespace fest, dann muss man das nicht immer angeben
+using namespace std; //Setzt den Namespace fest, dann muss man das nicht immer std::cout oder so schreiben. Es reicht cout
 int main(){
   
   ifstream fin ("daten.txt"); //öffnet die Input-Datei
   ofstream fout("Summen.txt"); //öffnet die Output-Datei
   int summe;
   int zahl;
-  for( int j = 0; j < 234; j++){ // Schleife über alle Zeilen
+  for( int j = 0; j < 234; j++){ // Läuft durch jede Zeile und Schreibt die Summe in die Output-Datei
     summe = 0;
-    for( int i = 0; i < 2; i++){ // Schleife für jede Zeile. Liest Ziffer 1 und 2 und summiert diese.
+    for( int i = 0; i < 2; i++){ // Summiert die Zahlenpaare in aktueller Zeile
       fin >> zahl;
       summe = summe + zahl; 
-      
     } 
-    fout << summe << endl; // Schreibt die Summe in die Output-Datei
+    fout << summe << endl;
   }
-  //cout << summe << endl;
   fout.close(); // Schließt die Output-Datei
   fin.close();  // Schließt die Input-Datei
-  
-
 }
