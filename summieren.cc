@@ -1,4 +1,4 @@
-// Initialisierung der Pakete
+// Initialisierung der Header-Dateien
 #include <iostream>
 #include <fstream>
 using namespace std; //Setzt den Namespace fest, dann muss man das nicht immer std::cout oder so schreiben. Es reicht cout
