@@ -5,7 +5,7 @@ using namespace std; //Setzt den Namespace fest, dann muss man das nicht immer s
 int main(){
   
   ifstream fin ("daten.txt"); //öffnet die Input-Datei
-  ofstream fout("Summen.txt"); //öffnet die Output-Datei
+  ofstream fout("datensumme.txt"); //öffnet die Output-Datei
   int summe;
   int zahl;
   for( int j = 0; j < 234; j++){ // Läuft durch jede Zeile und Schreibt die Summe in die Output-Datei
