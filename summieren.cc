@@ -18,18 +18,25 @@ fin.close()
 */
 #include <iostream>
 #include <fstream>
-
+using namespace std;
 int main(){
   
-  std::ifstream fin ("daten.txt");
+  ifstream fin ("daten.txt");
+  ofstream fout("Summen.txt");
   int summe;
   int zahl;
-  for( int i = 0; i < 234; i++){
-    fin >> zahl;
-    summe = summe + zahl;
-    
+  for( int j = 0; j < 234; j++){
+    summe = 0;
+    for( int i = 0; i < 2; i++){
+      fin >> zahl;
+      summe = summe + zahl; 
+      
+    } 
+    fout << summe << endl;
   }
-  std::cout << summe << std::endl;
+  //cout << summe << endl;
+  fout.close();
   fin.close();
+  
 
 }
