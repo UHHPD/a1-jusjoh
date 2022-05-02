@@ -4,10 +4,8 @@
 #include <cmath>
 using namespace std; //Setzt den Namespace fest, dann muss man das nicht immer std::cout oder so schreiben. Es reicht cout
 int main(){
-  double zahl;
-  double summe;
-  double varianz;
-  double st_abweich;
+  double zahl, summe, varianz, st_abweich;
+
   ifstream fin ("datensumme.txt"); //öffnet die Input-Datei
   ifstream fin2 ("datensumme.txt"); //öffnet die Input-Datei
   //ofstream fout("");
@@ -30,3 +28,8 @@ int main(){
   
   fin.close();  // Schließt die Input-Datei
 }
+/*
+Mittelwert:3.11538
+Varianz:2.73455
+Standardabweichung:1.65365
+  */
