@@ -23,13 +23,13 @@ int main(){
   
   for( int j = 0; j < 26; j++){ // Läuft durch jede Zeile und Schreibt die Summe in die Output-Datei
     summe = 0;
-    for( int i = 0; i < 8; i++){
+    for( int i = 0; i < 9; i++){
       fin >> zahl;
       summe += zahl;
     }
     mw = summe/9;
     summe = 0;
-    for( int i = 0; i < 8; i++){
+    for( int i = 0; i < 9; i++){
     fin2 >> zahl;
     summe += (zahl-mw)*(zahl-mw);
   }
@@ -54,5 +54,6 @@ int main(){
   ifstream fin_mw ("mittelwerte.txt");
   ifstream fin_v  ("varianzen.txt");
   cout << "Mittelwert der Mittelwerte: " << mw_mw(fin_mw) << endl;
+  cout << "Mittelwert der Varianzen: " << mw_mw(fin_v) << endl;
 }
 
